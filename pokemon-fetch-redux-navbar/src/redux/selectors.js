@@ -1,3 +1,3 @@
-export const selectList = (state) => state.list;
-export const selectStatus = (state) => state.status;
-export const selectError = (state) => state.error;
+export const selectPokemonList = (state) => state.pokemonList
+export const selectError = (state) => state.error
+export const selectStatus = (state) => state.status

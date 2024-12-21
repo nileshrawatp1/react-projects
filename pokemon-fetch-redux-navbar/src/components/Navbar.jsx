@@ -1,34 +1,26 @@
 import React from 'react'
-import { NavLink } from 'react-router'
-
+import { NavLink } from 'react-router';
 function Navbar() {
 
-    const toggleMenu = () => {
-        const navMenu = document.querySelector(".nav-menu");
-        const pokemonList = document.querySelector(".pokemon-list");
+    const mobileView = () => {
         const hamburger = document.querySelector(".hamburger");
-        navMenu.classList.toggle('active')
-        pokemonList.classList.toggle('active')
-        hamburger.classList.toggle('active')
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.classList.toggle("active")
+        navMenu.classList.toggle("active")
     }
 
     return (
         <>
-            <header className="header">
-                <nav className="navbar">
-                    <NavLink to="/" className="nav-logo">Pokemons</NavLink>
+            <header className='header'>
+                <nav className='navbar'>
+                    <NavLink className='nav-logo' to="/">Pokemon</NavLink>
                     <ul className="nav-menu">
-                        <li className="nav-item">
-                            <NavLink to='/' className='nav-link'>Home</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/about' className='nav-link'>About</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/contact' className='nav-link'>Contact</NavLink>
-                        </li>
+                        <li className="nav-item"><NavLink to="/" className="nav-link">Home</NavLink></li>
+                        <li className="nav-item"><NavLink to="/about" className="nav-link">About</NavLink></li>
+                        <li className="nav-item"><NavLink to="/contact" className="nav-link">Contact</NavLink></li>
                     </ul>
-                    <div className="hamburger" onClick={toggleMenu}>
+                    <div className="hamburger" onClick={(e) => mobileView()}>
                         <span className="bar"></span>
                         <span className="bar"></span>
                         <span className="bar"></span>
