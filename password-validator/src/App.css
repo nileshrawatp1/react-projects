@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    display: block;
+    color: aqua;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.passvalid-div {
+    margin: 30px 20px;
+    width: 100%;
+}
+
+label {
+    margin-left: 30%;
+}
+
+.msg {
+    display: block;
+    margin: 10px 40% ;
+    color: red;
+}
+
+.success-msg {
+    display: block;
+    margin: 10px 40% ;
+    color: green;
+}
