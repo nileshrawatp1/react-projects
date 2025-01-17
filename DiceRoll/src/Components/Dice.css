@@ -1,0 +1,23 @@
+.dice-container {
+    display: inline-block;
+}
+
+.Die {
+    font-size: 10em;
+    padding: 0.25em;
+    color: slateblue;
+    transition: transform 2s ease-out;
+}
+
+.Die-rolling {
+    animation: roll 1s linear infinite; /* Use a more appropriate timing function */
+}
+
+ @keyframes roll {
+    0% {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    100% {
+        transform: rotate3d(1, 1, 1, 360deg); /* Rotate around all axes */
+    }
+}
