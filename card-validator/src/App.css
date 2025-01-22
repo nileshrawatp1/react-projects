@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    flex: 1;
+    width: 70%;
+}
+
+.input-container input {
+    width: 90%;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.input-container input:focus {
+    border-color: #4139ca;
+}
+
+.input-container label {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    color: #7e7e7e;
+    font-size: 18px;
+    transform: translateY(-25%);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -7px;
+    color: #212121;
+    padding-inline: .3rem;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.msg {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.errorMsg {
+    color: red;
+}
+
+.successMsg {
+    color: green;
+}
