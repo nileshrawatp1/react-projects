@@ -1,0 +1,12 @@
+/* .result-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 2rem ;
+} */
+
+.result-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    justify-content: center;
+}

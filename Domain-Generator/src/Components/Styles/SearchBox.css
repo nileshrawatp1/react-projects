@@ -1,0 +1,24 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.search-input {
+    outline: none;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    background-color: #a592f2;
+    color: #e7e9f0;
+    border: none;
+    font-size: 22px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.search-input::placeholder {
+    color: #e7e9f0
+}
+
+.search-input:focus {
+    outline: navy;
+}
