@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+.App {
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+.search-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    outline: none;
+    padding: 0.5rem;
+    width: 60%;
+    max-width: 400px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.search-btn {
+    background-color: #4da1ab;
+    color: #e0e0e0;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.recipes {
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.recipe-card {
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgb(63, 60, 60);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: linear-gradient(to right,
+            #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%,
+            #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+    align-items: center;
+    padding: 1rem;
+    font-family: 'Lobster', cursive;
+}
+
+.image {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.error-msg {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .search-input {
+        width: 80%;
+    }
+
+    .recipes {
+        grid-template-columns: 1fr;
+    }
+}
