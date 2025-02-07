@@ -4,9 +4,9 @@ import './App.css'
 import Recipe from './Recipe';
 
 function App() {
-    const [query, setQuery] = useState('Omelette');
+    const [query, setQuery] = useState('Soup');
     const [recipe, setRecipe] = useState([]);
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('Soup')
     const [error, setError] = useState(null)
 
     const getRecipe = async () => {
@@ -50,13 +50,18 @@ function App() {
                 .filter(key => key.startsWith('strIngredient') && meal[key])
                 .map(key => (meal[key]))
             }
+            measurements={Object.keys(meal)
+                .filter(key => key.startsWith('strMeasure') && meal[key])
+                .map(key => meal[key])
+            }
         />
     ))
 
     return (
         <div className='App'>
+            <h1 className='title'>Welcome to Food Recipe App</h1>
             <form className='search-form' onSubmit={getSearch}>
-                <input type="text" className='search-input' onChange={e => setSearch(e.target.value)} />
+                <input type="text" className='search-input' onChange={e => setSearch(e.target.value)} placeholder='Whats the Craving' />
                 <button type="submit" className='search-btn'>Search</button>
             </form>
             {error && <p className='error-msg'>No Recipe Found</p>}

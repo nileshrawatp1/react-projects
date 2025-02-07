@@ -5,6 +5,11 @@ body {
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
+.title{
+    font-family: 'Lobster', cursive;
+    letter-spacing: 0.3rem;
+}
+
 .App {
     margin: 2rem auto;
     display: flex;
@@ -42,17 +47,28 @@ body {
 }
 
 .recipes {
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     width: 100%;
     padding: 1rem;
 }
 
+.recipe-name {
+    letter-spacing: 0.2rem;
+}
+
+.sub-headings {
+    color: #13547a;
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
 .recipe-card {
+    flex: 1 1 calc(40% - 1rem);
+    max-width: calc(40% - 1rem);
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgb(63, 60, 60);
     margin: 1rem;
@@ -81,6 +97,22 @@ body {
 
 a {
     text-decoration: none;
+    color: #150af5;
+}
+
+@media (max-width: 1000px) {
+    .search-input {
+        width: 80%;
+    }
+
+    .recipes {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card {
+        flex: 1 1 calc(80% - 1rem);
+        max-width: calc(80% - 1rem);
+    }
 }
 
 @media (max-width: 768px) {
@@ -90,5 +122,17 @@ a {
 
     .recipes {
         grid-template-columns: 1fr;
+    }
+
+    .recipe-card {
+        flex: 1 1 calc(80% - 1rem);
+        max-width: calc(80% - 1rem);
+    }
+}
+
+@media (max-width: 500px) {
+    .recipe-card {
+        flex: 1 1 calc(100% - 1rem);
+        max-width: calc(100% - 1rem);
     }
 }

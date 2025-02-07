@@ -6,19 +6,23 @@ const Recipe = (
         image,
         instructions,
         video,
-        ingredients
+        ingredients,
+        measurements
     }
 ) => {
 
     return (
         <div className='recipe-card'>
             <h1 className="recipe-name">{recipeName}</h1>
+            <h4 className='sub-headings'>Required Things - With Quantity</h4>
             <ol>
-                {ingredients.map(ingredient => (
-                    <li key={ingredient}>{ingredient}</li>
+                {ingredients.map((ingredient, i) => (
+                    <li key={ingredient}>{ingredient} - ({measurements[i]})</li>
                 ))}
             </ol>
-            <img src={image} className='image' />
+            <img src={image} className='image' alt={recipeName}/>
+
+            <h4 className='sub-headings'>Steps to follow</h4>
             <ol className='instructions'>{
                 instructions.split('. ').map((step, i) => (
                     <li key={i}>{step}.</li>
